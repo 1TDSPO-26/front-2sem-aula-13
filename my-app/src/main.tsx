@@ -13,6 +13,7 @@ import Error from './routes/Error'
 import Lampada from './components/Lampada/index.tsx'
 import Conteudo from './components/Conteudo/index.tsx'
 
+
 const router = createBrowserRouter([
   {
     path: '/',
