@@ -1,5 +1,14 @@
 import { useParams } from "react-router";
 
+
+//TAREFA 1: para a AULA do dia 16/09/2026
+//Recuperar o produto selecionado em Produtos que envia o id do produto
+// Você deve utilizar os parâmetros do react-router
+// e o id do produto para o componente EditarProdutos
+// Você deve utilizar os HOOK useParams para recuperar o id do produto, o HOOK useState para
+// armazenar o produto e o HOOK useEffect para atualizar o produto quando o id mudar.
+
+
 const listaProdutos = [
     { id: 1, nome: "Produto 1", preco: 10.0 },
     { id: 2, nome: "Produto 2", preco: 20.0 },
@@ -14,7 +23,7 @@ export default function EditarProdutos() {
     const produto = listaProdutos.find((p) => p.id === Number(id));
 
     return (
-        <main>
+        <main style={{ padding: '20px' }}>
             <h2>Editar produtos</h2>
             <div>
                 {produto ? (
@@ -25,6 +34,7 @@ export default function EditarProdutos() {
                 ) : (
                     <p>Produto não encontrado!</p>
                 )}
+                <p>Identificador recebido pela rota: <strong>{id}</strong></p>
             </div>
         </main>
     );
